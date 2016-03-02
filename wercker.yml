@@ -23,7 +23,7 @@ build:
     - arjen/hugo-build:
         version: "0.14"
         theme: angels-ladder
-deploy:
+  deploy:
     - install-packages:
         packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
