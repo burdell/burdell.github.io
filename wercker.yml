@@ -29,3 +29,4 @@ deploy:
             token: $GIT_TOKEN
             domain: nathaniscool.com
             basedir: public
+
