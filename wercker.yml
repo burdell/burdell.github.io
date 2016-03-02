@@ -20,13 +20,12 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
-    - arjen/hugo-build:
-        version: "0.14"
-        theme: angels-ladder
-  deploy:
-    - install-packages:
-        packages: git ssh-client
-    - lukevivier/gh-pages@0.2.1:
-        token: $GIT_TOKEN
-        domain: nathaniscool.com
-        basedir: public
+    - arjen/hugo-build@1.8.1
+deploy:
+    steps:
+        - install-packages:
+            packages: git ssh-client
+        - lukevivier/gh-pages@0.2.1:
+            token: $GIT_TOKEN
+            domain: hugo-wercker.ig.nore.me
+            basedir: public
