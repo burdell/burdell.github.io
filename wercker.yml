@@ -25,7 +25,7 @@ deploy:
     steps:
         - install-packages:
             packages: git ssh-client
-        - lukevivier/gh-pages@0.2.1:
+        - lukevivier/gh-pages-user@0.0.1:
             token: $GIT_TOKEN
-            domain: hugo-wercker.ig.nore.me
+            domain: nathaniscool.com
             basedir: public
