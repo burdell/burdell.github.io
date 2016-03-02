@@ -20,7 +20,9 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
-    - arjen/hugo-build@1.8.1
+    - arjen/hugo-build:
+        version: "0.14"
+        theme: angels-ladder
 deploy:
     - install-packages:
         packages: git ssh-client
