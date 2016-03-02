@@ -4,8 +4,8 @@ go:
 env:
   global:
   - SSH_KEY="id_rsa"
-  - GIT_NAME="Roman Coedo"
-  - GIT_EMAIL="romancoedo@gmail.com"
+  - GIT_NAME="Nathan Griffin"
+  - GIT_EMAIL="nathanjgriffin@gmail.com"
   - SOURCE_DIR="public"
   - DEPLOY_BRANCH="source"
 before_install:
