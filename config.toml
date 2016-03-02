@@ -1,0 +1,14 @@
+baseurl = "http://nathaniscool.com/"
+languageCode = "en"
+title = "nathan griffin"
+disqusShortname = ""
+theme="angels-ladder"
+
+[Params]
+subtitle = ""
+facebook = ""
+twitter = "https://twitter.com/nathaniscool"
+github = "https://github.com/burdell"
+profile = ""
+copyright = ""
+analytics = "UA-XXXXXXXX-X"
