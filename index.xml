@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nathan griffin</title>
+    <link>http://nathaniscool.com/</link>
+    <description>Recent content on nathan griffin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Mar 2016 13:41:59 -0500</lastBuildDate>
+    <atom:link href="http://nathaniscool.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Post 0, Part 2 - Now With Hugo!</title>
+      <link>http://nathaniscool.com/post/newandimproved/</link>
+      <pubDate>Wed, 02 Mar 2016 13:41:59 -0500</pubDate>
+      
+      <guid>http://nathaniscool.com/post/newandimproved/</guid>
+      <description>&lt;p&gt;&lt;em&gt;whoa&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s been awhile. So much has changed. Previous little projects have broken. I&amp;rsquo;ve seen the errors of the naive Nathan that wrote previous blog posts.&lt;/p&gt;
+
+&lt;p&gt;I always have a noble goal of writing more blog posts, but it never happens. Here&amp;rsquo;s an attempt to fix that I guess. I do have a couple of blog posts about some interesting work I&amp;rsquo;ve done in the last year or so that I&amp;rsquo;m going to try and get out. Stay tuned.&lt;/p&gt;
+
+&lt;p&gt;I switched static site generators to &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; from Wintersmith. Hugo is written in Go rather than being built on top of Node in JavaScript like Wintersmith.&lt;/p&gt;
+
+&lt;p&gt;I think I have these lofty dreams of using a super customizable generator and writing a ton of stuff on my own, but ultimately just lose motivation / get frustrated when I do try to do that. Hugo is unbelievably easy to get started right out of the box. I probably started switching it over about an hour ago and have really enjoyed the out-of-box stuff it provides, like live-reloading. Other site generators I researched could probably be more powerful with tweaking, but Hugo looked like the easiest to get off the ground fastest. The customization process looks pretty painless too. We&amp;rsquo;ll see.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Best Albums of 2014 ... so far</title>
+      <link>http://nathaniscool.com/post/cooljamz/</link>
+      <pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://nathaniscool.com/post/cooljamz/</guid>
+      <description>&lt;p&gt;The first half of 2014 is over. Instead of doing an all-year best-of at the end of the year, here are my favorite albums (and &lt;em&gt;why&lt;/em&gt; they are my favorites) of the past 6 months. In no particular order&amp;hellip;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/Metamodern-Sounds-Country-Sturgill-Simpson/dp/B00J8JQ6D4/&#34;&gt;&lt;strong&gt;Metamodern Sounds in Country Music&lt;/strong&gt;&lt;/a&gt; by Sturgill Simpson | &lt;em&gt;Sounds like&lt;/em&gt;: not-stupid country music&lt;/p&gt;
+
+&lt;p&gt;An album for those too cynical to believe country music can rise from its current inanity (lol baby u song ;)). It&amp;rsquo;s got a psychedelic flavor to it, but it&amp;rsquo;s all jangly and twangy and old-school-country &lt;em&gt;good&lt;/em&gt;. So, so good.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You should listen to&lt;/em&gt;: Long White Line&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/Water-Liars/dp/B00H3TVOMO/&#34;&gt;&lt;strong&gt;Water Liars&lt;/strong&gt;&lt;/a&gt; by Water Liars | &lt;em&gt;Sounds like&lt;/em&gt;: Honesty soaked in fuzzy, southern goodness&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Wyoming&lt;/em&gt; was one of my favorites from last year and Water Liars&amp;rsquo; second album in as many years wasn&amp;rsquo;t disappointing. I really like his writing style, and the honest simplicity of their music.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You should listen to&lt;/em&gt;: I Want Blood&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/Dark-Arc-Saintseneca/dp/B00I1XYF7C/&#34;&gt;&lt;strong&gt;Dark Arc&lt;/strong&gt;&lt;/a&gt; by Saintseneca | &lt;em&gt;Sounds like&lt;/em&gt;: Catchy, folksy tunes with clever, comtemplative lyrics.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d heard of Saintseneca before but nothing from them really stuck until this album. The production on Dark Arc is really, really good. I went back and listened to their earlier stuff, and while it&amp;rsquo;s good, this album feels way more layered and grown up.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You should listen to&lt;/em&gt;: Happy Alone&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/Sylvan-Esso/dp/B00JBACAF8&#34;&gt;&lt;strong&gt;Sylvan Esso&lt;/strong&gt;&lt;/a&gt; by Sylvan Esso | &lt;em&gt;Sounds like&lt;/em&gt;: Deliciousness&lt;/p&gt;
+
+&lt;p&gt;If you &lt;em&gt;made&lt;/em&gt; me pick a favorite album, this is it. It&amp;rsquo;s &lt;em&gt;unbelievably&lt;/em&gt; good. I&amp;rsquo;m not against electronic music, but it generally is pretty difficult for me to really like it past &amp;ldquo;WOO THIS IS BEEPY AND FUN&amp;rdquo;. This album is both electronic &lt;em&gt;and&lt;/em&gt; earthy which is probably why it is so mesmerizing.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You should listen to&lt;/em&gt;: Dress&amp;hellip;no, wait&amp;hellip;Hey, Mami&amp;hellip;no, just listen to all of them&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/Parish-Lines-Rod-Melancon/dp/B00IJBIQYO&#34;&gt;&lt;strong&gt;Parish Lines&lt;/strong&gt;&lt;/a&gt; by Rod Melancon | &lt;em&gt;Sounds like&lt;/em&gt;: Rootsy, bluesy, twangtastic&amp;rsquo;ness&lt;/p&gt;
+
+&lt;p&gt;An album full of really great songs that tell stories. Maybe I&amp;rsquo;m just cynical that story songs seem to be confined to folk singers, but this album assured me that great songwriters can still &lt;a href=&#34;http://www.urbandictionary.com/define.php?term=throwing%20cheddar&#34;&gt;throw cheddar&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You should listen to&lt;/em&gt;: Duck Festival Queen&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/PHOX/dp/B00JC8DTB8&#34;&gt;&lt;strong&gt;PHOX&lt;/strong&gt;&lt;/a&gt; by PHOX | &lt;em&gt;Sounds like&lt;/em&gt;: Sassy, smooth dreams&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been waiting a pretty long time for this album. PHOX has had a few singles and YouTube songs floating around, and I&amp;rsquo;ve even (sorta) seen them live twice. But no actual album &amp;hellip; UNTIL NOW. Self-described as &amp;ldquo;nap pop&amp;rdquo;, the production on this album was really, really good and all the songs are done really well. It&amp;rsquo;s a little soulful and smooth, but also a little snappy and poppy &lt;em&gt;all at the same time&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You should listen to&lt;/em&gt;: Slow Motion&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/Range-Light-S-Carey/dp/B00IYWHTRS&#34;&gt;&lt;strong&gt;Range of Light&lt;/strong&gt;&lt;/a&gt; by S. Carey | &lt;em&gt;Sounds like&lt;/em&gt;: A cup of tea by a lake in the fog. Electronic fog.&lt;/p&gt;
+
+&lt;p&gt;While knowing how to pronounce Bon Iver doesn&amp;rsquo;t get you hipster points anymore, knowing Sean Carey is their drummer &lt;em&gt;and&lt;/em&gt; putting him on your favorite albums list probably does. I didn&amp;rsquo;t really like his first album that much, but this one is really good. It&amp;rsquo;s definitely an album for when you&amp;rsquo;re in the mood and have time to &lt;em&gt;really&lt;/em&gt; listen to it. It&amp;rsquo;s layered and atmospheric and intricate.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You should listen to&lt;/em&gt;: Neverending Fountain&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here are playlists (&lt;a href=&#34;http://open.spotify.com/user/burdell/playlist/4mnonu52XETx2QwP7u1GCz&#34;&gt;Spotify&lt;/a&gt; and &lt;a href=&#34;https://www.rdio.com/people/NathanGriffin89/playlists/8306674/2014-a_JAMS/&#34;&gt;Rdio&lt;/a&gt;) with all the songs &lt;em&gt;plus&lt;/em&gt; a bunch more other songs I&amp;rsquo;ve been listening to so far this year.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FluentCoffee - A Fluent Validator in CoffeeScript</title>
+      <link>http://nathaniscool.com/post/fluentcoffee/</link>
+      <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://nathaniscool.com/post/fluentcoffee/</guid>
+      <description>
+
+&lt;p&gt;I went to a talk on CoffeeScript a few weeks ago and it sorta sparked my interest in it. I&amp;rsquo;d looked at it a long time ago, but hadn&amp;rsquo;t actually done anything with it, so I decided to write something small to try it out.&lt;/p&gt;
+
+&lt;p&gt;The result was &lt;a href=&#34;https://github.com/burdell/FluentCoffee&#34;&gt;FluentCoffee&lt;/a&gt;, a fluent validator. Doing things fluently just means you chain together calls to functions which accomplishes what you&amp;rsquo;re trying to do.&lt;/p&gt;
+
+&lt;h3 id=&#34;basic-validation:469679c4f97c488a9b9f959f11ebb939&#34;&gt;Basic Validation&lt;/h3&gt;
+
+&lt;p&gt;Everything hinges off these basic validation functions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GreaterThan&lt;/li&gt;
+&lt;li&gt;LessThan&lt;/li&gt;
+&lt;li&gt;Between&lt;/li&gt;
+&lt;li&gt;EqualTo&lt;/li&gt;
+&lt;li&gt;Contains&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is also &lt;em&gt;Length()&lt;/em&gt; and &lt;em&gt;Not()&lt;/em&gt; that can be used (where it makes sense).&lt;/p&gt;
+
+&lt;p&gt;So for primitive values (strings, numbers, arrays, booleans, etc) you validate them this way:
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    primitiveValidation = new Validator()
+        .For [1, 2, 3, 4, 6], &amp;ldquo;number array&amp;rdquo;
+            .Contains 2
+            .Not().Contains(5)
+        .For &amp;ldquo;how now brown cow&amp;rdquo;, &amp;ldquo;stupid saying&amp;rdquo;
+            .Length().GreaterThan 10
+        .For 3 * 10, &amp;ldquo;calculation&amp;rdquo;
+            .LessThan 340
+            .Between 250, 275
+        .For 40 &amp;lt; 50
+            .EqualTo true
+    .Assert()
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;The first parameter is the value, the second is the &lt;em&gt;name&lt;/em&gt; of the value. The second parameter is optional, defaulting to &amp;ldquo;Value&amp;rdquo; if you don&amp;rsquo;t include it.&lt;/p&gt;
+
+&lt;p&gt;This returns an object with a boolean &lt;em&gt;valid&lt;/em&gt; attribute, and list of object that contain the error message and the name of offending value. The above validation would return this:&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    {
+        valid: false,
+        errors: [
+            {
+                value: &#34;calculation&#34;,
+                message: &#34;calculation must be between 250 and 275&#34;
+            }
+        ]
+    }
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;object-validations:469679c4f97c488a9b9f959f11ebb939&#34;&gt;Object Validations&lt;/h3&gt;
+
+&lt;p&gt;Object validation has all the same validations, but you just tell it which attribute to validate when you call &lt;em&gt;.For()&lt;/em&gt; on it. You have to qualify whether an attribute is required (&lt;em&gt;Require()&lt;/em&gt;) or optional (&lt;em&gt;Optional()&lt;/em&gt;). If an attribute is required, the validator will check its existance and add an error if it is not there.&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    objMe = 
+        name: &#34;Nathan Griffin&#34;,
+        age: 82,
+        numberOfAppendages: 20,
+        faveCereal: &#34;Honey Bunches of Oats&#34;,
+        job: &#34;Code Ninja&#34;,
+        phoneOpSystem: &#34;Android&#34;
+
+    validation = new Validator()
+        .For objMe
+            .Require &#34;age&#34;
+                .LessThan 30
+                .Not().EqualTo 29
+            .Require &#34;numberOfAppendages&#34;
+                .Between 15, 25
+            .Require &#34;name&#34;
+                .EqualTo &#34;Nathan Griffin&#34;
+            .Require &#34;phoneOpSystem&#34;
+            .Require &#34;job&#34;
+                .Contains &#34;Ninja&#34;
+                .Length().GreaterThan 5
+            .Optional &#34;nickname&#34;
+                .Not().Contains &#34;Dawg&#34; 
+        .Assert()
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;function-validation:469679c4f97c488a9b9f959f11ebb939&#34;&gt;Function Validation&lt;/h3&gt;
+
+&lt;p&gt;For function validation you just call &lt;em&gt;WithParameters()&lt;/em&gt; to evaluate the result as one of the previously mentioned validation types (or even one or more function validations if you&amp;rsquo;re feeling sassy)&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class=&#34;prettyprint&#34;&gt;
+    objMe =
+        name: &amp;ldquo;Nathan Griffin&amp;rdquo;,
+        job: &amp;ldquo;Code Ninja&amp;rdquo;,
+        address: &amp;ldquo;1234 Sesame St Atlanta GA 30305&amp;rdquo;,
+        favoriteCereal: &amp;ldquo;Honey Bunches of Oats&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    objBurdell =
+        name: &amp;quot;George P. Burdell&amp;quot;,
+        job: &amp;quot;trollol&amp;quot;,
+        age: 87,
+        favoriteCereal: &amp;quot;Fruit Loops&amp;quot;
+
+    identityFunction = (isMe) -&amp;gt;
+        if isMe then objMe else objBurdell
+
+    functionValidation = new Validator()
+        .For identityFunction
+            .WithParameters true
+                .Require &amp;quot;name&amp;quot;
+                    .EqualTo &amp;quot;Nathan Griffin&amp;quot;
+                .Require &amp;quot;job&amp;quot;
+                    .Contains &amp;quot;Ninja&amp;quot;
+            .WithParameters()
+                .Require &amp;quot;name&amp;quot;
+                    .EqualTo &amp;quot;George P. Burdell&amp;quot;
+                .Require &amp;quot;job&amp;quot;
+                    .Contains &amp;quot;troll&amp;quot;
+                .Require &amp;quot;age&amp;quot;
+                    .GreaterThan 50
+                    .LessThan 90
+        .Assert()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;
+Not sure if it&amp;rsquo;s obvious, but you can chain all these together. Look at &lt;a href=&#34;https://github.com/burdell/FluentCoffee/blob/master/coffeeTester.coffee&#34;&gt;coffeeTester.coffee&lt;/a&gt; to see that.&lt;/p&gt;
+
+&lt;p&gt;So that&amp;rsquo;s basically it. I&amp;rsquo;m sure there&amp;rsquo;s weird stuff / bugs if you try to be stupid with it, so be warned.&lt;/p&gt;
+
+&lt;p&gt;One thing that&amp;rsquo;d be cool that it currently doesn&amp;rsquo;t do would be to &amp;ldquo;cache&amp;rdquo; the validation so that I could validate all the steps at one point, do something else, then run the validation again without having to re-state the validations. This would also probably mean that the validations wouldn&amp;rsquo;t actually be evaluated until you called &lt;em&gt;Assert()&lt;/em&gt;, which I could see having some value. I almost started to refactor it to do that, but got kinda meh about it since there&amp;rsquo;s something else I want to start.&lt;/p&gt;
+
+&lt;p&gt;Some quick thoughts on CoffeeScript&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;hi-h8rs-coffeescript:469679c4f97c488a9b9f959f11ebb939&#34;&gt;&amp;ldquo;hi h8rs&amp;rdquo; - CoffeeScript&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;“There are three things I have learned never to discuss with people&amp;hellip; Religion, Politics, and CoffeeScript.”&lt;/em&gt;
+― Charles M. Schulz, mostly&lt;/p&gt;
+
+&lt;p&gt;In the world of JavaScript, CoffeeScript gets a bunch of hate. It seems most people fall into either the camp of &amp;ldquo;&lt;em&gt;WOW I LOVE THIS&lt;/em&gt;&amp;rdquo; or &amp;ldquo;&lt;em&gt;THIS IS VILE JIVE&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Most people probably dislike CoffeeScript for the same reason people dislike a bunch of things:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s unfamiliar&lt;/li&gt;
+&lt;li&gt;It changes the way they&amp;rsquo;ve done stuff&lt;/li&gt;
+&lt;li&gt;They misunderstand what it&amp;rsquo;s trying to do&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I think CoffeeScript really should be though of more like a &lt;em&gt;tool&lt;/em&gt; rather than a &lt;em&gt;language&lt;/em&gt;. Just like an IDE or a fancy text editor or a linter, CoffeeScript is simply a tool employed to write JavaScript. Yes, it&amp;rsquo;s an abstraction and therefore an intrinsically more complicated way to write it, but at the end of the day you&amp;rsquo;re generating JavaScript. Tools and support for CoffeeScript were (apparently) lacking in the past, but that&amp;rsquo;s just not a valid argument against it anymore. I had zero issues with getting it up and running with Sublime Text on OS X within minutes. And I&amp;rsquo;m sure there are even more tools out there that I didn&amp;rsquo;t take advantage of.&lt;/p&gt;
+
+&lt;p&gt;I used to have the commonly held position of &lt;em&gt;&amp;ldquo;It&amp;rsquo;s better to just learn to write GOOD JavaScript&amp;rdquo;&lt;/em&gt;, but trying to write anything non-trivial in CoffeeScript actually requires a pretty in-depth understanding of JavaScript. If you don&amp;rsquo;t have a pretty firm grasp of JavaScript, your CoffeeScript is just going to either end up being terrible CoffeeScript instead of terrible JavaScript, or full of weird JavaScript-y CoffeeScript workarounds.&lt;/p&gt;
+
+&lt;p&gt;I actually found CoffeeScript to be pretty enjoyable to use. It was simple, yet expressive and did a good job of getting out of your way. No clunky anonymous function declarations, built in null checking (really, this feature alone might be worth it), expressive 1-line conditionals, super easy handling of arbitrary parameter lengths, etc. The list goes on.&lt;/p&gt;
+
+&lt;h3 id=&#34;but-would-i-want-to-switch-to-coffeescript-permanently:469679c4f97c488a9b9f959f11ebb939&#34;&gt;&amp;hellip;but would I want to switch to CoffeeScript permanently?&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;d probably be interested in doing more stuff in CoffeeScript, but I&amp;rsquo;m not sure I&amp;rsquo;m ready to slip into robes of a CoffeeScript evangelist quite yet. If I was part of team where everybody really bought into the idea, I don&amp;rsquo;t think I would hate that. A big part of that is it would be much, much easier to have a syntatically homogenous codebase in CoffeeScript.&lt;/p&gt;
+
+&lt;p&gt;Like I mentioned earlier, the endgame of CoffeeScript is still JavaScript. I didn&amp;rsquo;t like having the extra step when debugging what I was writing. Luckily, FluentCoffee ended up only being ~120 lines of code, so I pretty much knew where errors were happening. On a much larger codebase I&amp;rsquo;m sure that quickly becomes an issue. Yes, I know sourcemaps exist for this. Which leads to my next point&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Syntactically the learning curve to CoffeeScript is really nice. But I think the point at which you could truly write it more efficiently than JavaScript takes some investment with the extra tooling needed and the built-in complexity that the Coffeescript -&amp;gt; JavaScript process brings. Maybe it doesn&amp;rsquo;t, but there were times even writing something as relatively simple as FluentCoffee that I was scratching my head a little. Having team members that are invested in really understanding CoffeeScript and tools for it would also really help with this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>$parse - Power to the Directive</title>
+      <link>http://nathaniscool.com/post/parsepower/</link>
+      <pubDate>Fri, 17 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://nathaniscool.com/post/parsepower/</guid>
+      <description>
+
+&lt;p&gt;I mentioned in a &lt;a href=&#34;http://nathaniscool.com/articles/angularjs/&#34;&gt;previous post&lt;/a&gt; about switching from using Backbone.js to Angular.js for front-end development at work. One of the goals of that switch was to basically allow a developer to create a page using just semantic markup and have 90% or more of the front-end functionality completed.&lt;/p&gt;
+
+&lt;p&gt;Anybody familiar with Angular knows exactly how to accomplish this: &lt;em&gt;directives&lt;/em&gt;. Angular gives you a ton of directives out of the box. Stuff like showing elements, hiding elements, disabling elements, looping, conditionals, .etc all come for free and can be dropped right into your HTML. Boom.&lt;/p&gt;
+
+&lt;p&gt;Anybody who has attempted to write their own at some point wonders: How does Angular make them so powerful? Why can&amp;rsquo;t I have &lt;em&gt;nice&lt;/em&gt; things?&lt;/p&gt;
+
+&lt;h3 id=&#34;a-solution:d93e9551ad2903f938fcd5f2eeb76d70&#34;&gt;A Solution&lt;/h3&gt;
+
+&lt;p&gt;One of the coolest and most &amp;ldquo;magical&amp;rdquo; parts that people first notice with Angular is the ability to pass in actual JavaScript expressions straight from the DOM. I was really curious as to how exactly Angular handles this so well. Angular &lt;em&gt;feels&lt;/em&gt; magical sometimes, but at the end of the day it&amp;rsquo;s just JavaScript. So I went to the source code, and &lt;a href=&#34;https://github.com/angular/angular.js/blob/master/src/ng/parse.js&#34;&gt;AHA&lt;/a&gt;! They&amp;rsquo;ve written their own parsing engine.&lt;/p&gt;
+
+&lt;p&gt;And it turns out &lt;em&gt;you too&lt;/em&gt; can parse stringed expressions by injecting their &lt;a href=&#34;http://docs.angularjs.org/api/ng.$parse&#34;&gt;$parse&lt;/a&gt; service where you need it. This had a profound impact when trying to write directives that could be 1) re-used and 2) entirely defined through markup.&lt;/p&gt;
+
+&lt;h3 id=&#34;simple-examples:d93e9551ad2903f938fcd5f2eeb76d70&#34;&gt;Simple Examples&lt;/h3&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;http://jsfiddle.net/5SFj7/5/embedded/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&#34;ok-so:d93e9551ad2903f938fcd5f2eeb76d70&#34;&gt;Ok, so &amp;hellip; ?&lt;/h3&gt;
+
+&lt;p&gt;If you&amp;rsquo;ve written directives you&amp;rsquo;re probably well aware that HTML attributes passed into directive are just strings. Boring strings. What about complex objects? What about functions?&lt;/p&gt;
+
+&lt;p&gt;The simplest solution to this (and the one I went to first) is &lt;em&gt;&amp;ldquo;SCOPE!&amp;rdquo;&lt;/em&gt;. The directive and controller share this magical little object called scope. Anything I chunk in scope in the controller, I have access to in scope in the directive. So if I need a object / function / value in the directive, it&amp;rsquo;s super easy to just pass the directive the &lt;em&gt;name&lt;/em&gt; of it, and boom, access.&lt;/p&gt;
+
+&lt;p&gt;But remember, our goal for Angular was to have a developer come in and drop HTML declarations like they&amp;rsquo;re hot and be done with it. If I have to go to the controller and set up a bunch of stuff every time I have to use that directive, the glimmer of semantic markup is dulled. I&amp;rsquo;m all for following MVC and separating out concerns between the view and controller, but this feels really restrictive and unnecessary.&lt;/p&gt;
+
+&lt;h3 id=&#34;rethinking-the-approach:d93e9551ad2903f938fcd5f2eeb76d70&#34;&gt;Rethinking the Approach&lt;/h3&gt;
+
+&lt;p&gt;We had a need for a line-item directive for some upcoming functionality we were going to do, and had our own line-item jQuery plugin that worked pretty well, so the directive for this was just going to be a wrapper around that which took all the meta-data from markup and translated it into the options object for the plugin. Kinda like this:&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    &amp;lt;items ng-model=&#39;model.LineItemList&#39; default-length=&#39;5&#39;&amp;gt;
+        &amp;lt;column field=&#39;Name&#39;&amp;gt;&amp;lt;/column&amp;gt;
+        &amp;lt;column field=&#39;TotalOrdered&#39;&amp;gt;&amp;lt;/column&amp;gt;
+        &amp;lt;column field=&#39;Cost&#39;&amp;gt;&amp;lt;/column&amp;gt;
+        &amp;lt;column field=&#39;TotalPrice&#39;&amp;gt;&amp;lt;/column&amp;gt;
+    &amp;lt;/items&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;The plugin takes a list of column objects, and we could set up set up a multiplication calculation inside of there.&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    columns = [
+        { field: &#39;Name&#39; },
+        { field: &#39;TotalOrdered&#39; }
+        { field: &#39;Cost&#39; }
+        { 
+            field: &#39;TotalPrice&#39;, 
+            calculation: 
+            { 
+                operator: &#39;*&#39;, 
+                baseField: &#39;TotalOrdered&#39;, 
+                multiplier: &#39;Cost&#39; 
+            } 
+        }
+    ];
+&lt;/pre&gt;
+
+&lt;p&gt;With $parse we could just pass in that same object into the directive as a string. Like this:&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    &amp;lt;column 
+        field=&#39;TotalPrice&#39; 
+        calculation=&#39;{ operator=&#34;*&#34;, baseField=&#34;TotalOrdered&#34; multiplier=&#34;Cost&#34;}&#39;&amp;gt;
+    &amp;lt;/column&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;But does this make life easier? Yes, it works, but it&amp;rsquo;s weird, clunky, and just feels difficult.&lt;/p&gt;
+
+&lt;p&gt;And we were definitely going to need addition and subtraction. What if we need 4 numbers? And what if we need something like &amp;ldquo;TotalOrdered * TotalCost / (TotalCost * 3.14)&amp;ldquo;? If you&amp;rsquo;re sneaky, you&amp;rsquo;re probably already suspecting that the plugin would hold an object of functions keyed by the &amp;lsquo;operator&amp;rsquo; attribute, which means every different calculation requires a developer to go in and manually write the logic for that calculation.&lt;/p&gt;
+
+&lt;p&gt;This would be so much easier:&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    &amp;lt;column field=&#39;TotalPrice&#39; calculation=&#39;TotalOrdered * TotalCost&#39;&amp;gt;&amp;lt;/column&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;And with $parse this is &lt;em&gt;incredibly&lt;/em&gt; easy.&lt;/p&gt;
+
+&lt;p&gt;I wrote a simple calculator directive to show the idea behind doing this. The calculator is declared like this:&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    &amp;lt;calculator 
+        values=&#34;{ pi: 3.14, r: 12, e:.66789 }&#34; 
+        calculations=&#34;pi * r * r, e * r&#34; &amp;gt;
+    &amp;lt;/calculator&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;The idea is that any time you need to do a calculation, pass the data into a function and call $parse. In our line-item directive, we pass a function into the plugin so that the jQuery doesn&amp;rsquo;t need to mix with Angular, and the plugin uses that function and passes it whichever row of data is needed.&lt;/p&gt;
+
+&lt;p&gt;This calculator is slightly simpler in that the data is just one object ($scope.fieldValues) instead of multiple rows of objects, and I loop through all the calculations ($scope.calculations) and calculate the values.&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    $scope.$watch(&#34;fieldValues&#34;, function(){
+            var fieldValueNumbers = $scope.getFieldValueNumbers();
+            _.each($scope.calculations, function(calc) {
+                calc.value = $scope.calculate(calc.string, fieldValueNumbers);
+            });
+        }, true);
+
+    $scope.calculate = function(calculationString, values){
+            try {
+                var value = $parse(calculationString)(values);
+                return (_.isFinite(value) ? value : 0);
+            } catch (e) {
+                return &#34;Invalid expression :(&#34;
+            }
+        };
+&lt;/pre&gt;
+
+&lt;p&gt;(If you&amp;rsquo;re wondering, _.each and _.isFinite are from &lt;a href=&#34;http://underscorejs.org/&#34;&gt;Underscore&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;The full working example:
+&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;http://jsfiddle.net/GRKDQ/2/embedded/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;The GitHub repo for it is &lt;a href=&#34;https://github.com/burdell/AngularCalculator&#34;&gt;here&lt;/a&gt; if you want it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ListenFirst - Angular.js &amp; Last.fm</title>
+      <link>http://nathaniscool.com/post/angularjs/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://nathaniscool.com/post/angularjs/</guid>
+      <description>
+
+&lt;p&gt;We recently started using &lt;a href=&#34;http://angularjs.org/&#34;&gt;Angular.js&lt;/a&gt; at work for front-end development after using &lt;a href=&#34;http://backbonejs.org/&#34;&gt;Backbone.js&lt;/a&gt; for a little over a year. While we were still deciding on whether to to use it or not I wrote a &lt;a target=&#34;_blank&#34; href=&#34;http://www.nathaniscool.com/ListenFirst&#34;&gt;small app&lt;/a&gt; to play around with Angular that uses the Last.fm API and tells you the first time you listened to an artist, the last time you&amp;rsquo;ve listened, and how many times you&amp;rsquo;ve listened to them. (If you don&amp;rsquo;t have a Last.fm account, mine is &amp;lsquo;burdell&amp;rsquo;. Have fun.)&lt;/p&gt;
+
+&lt;p&gt;So next time you&amp;rsquo;re with your friends and they ask &amp;ldquo;Hey, have you heard of this band?&amp;rdquo;. You&amp;rsquo;re response will be &lt;a href=&#34;http://bitchinlifestyle.tv/wp-content/uploads/2013/03/homens-e1347382625816.jpg&#34;&gt;&amp;ldquo;Uh, yeah. I&amp;rsquo;ve listened to them since January 9, 2008&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s sometimes some weird issues with the API sometimes, but not sure if I&amp;rsquo;m going to go back and make it more robust or not. I&amp;rsquo;ve thought about doing something with &lt;a href=&#34;http://d3js.org/&#34;&gt;D3&lt;/a&gt; and listening data, but not sure what I&amp;rsquo;d do. So maybe I&amp;rsquo;ll revist it in the future.&lt;/p&gt;
+
+&lt;p&gt;Quick thoughts&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;backbone-vs-angular-library-vs-framework:5b7fafe42028dd2aed8d53d7e5079e12&#34;&gt;Backbone vs. Angular :: Library vs. Framework&lt;/h3&gt;
+
+&lt;p&gt;Backbone is more library-like. It gives you some (really good) tools and lets you do what you want with them. Angular is more of a framework. It gives you more of a system and puts more restrictions on how you work.&lt;/p&gt;
+
+&lt;p&gt;Both approaches have their advantages, but what ultimately led to switching at work was the leverage provided by Angular&amp;rsquo;s built in stuff, especially the programatic templating in Angular. Backbone views quickly become &lt;em&gt;monstrous&lt;/em&gt; with all the event handlers and having to program interaction away from the actual DOM.&lt;/p&gt;
+
+&lt;h3 id=&#34;directives-services-factories-oh-my:5b7fafe42028dd2aed8d53d7e5079e12&#34;&gt;Directives? Services? Factories? OH MY!&lt;/h3&gt;
+
+&lt;p&gt;Backbone felt a bunch like OO sometimes with the ability to extend models/views/collections, which I really liked. It was really easy to &amp;ldquo;get&amp;rdquo; what it was doing. Angular at first felt like a bunch of disconnected pieces. Once you figured out how these pieces fit together, it made sense and was awesome, but the learning curve to figuring that out was more than with Backbone.&lt;/p&gt;
+
+&lt;h3 id=&#34;last-fm:5b7fafe42028dd2aed8d53d7e5079e12&#34;&gt;Last.fm&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;ve thought about building this for awhile and I&amp;rsquo;ve used Last.fm since 2006 or so (although I reset my listening history in 2008 :(&amp;lsquo;. The API was pretty easy to use. There were some quirks, but overall I approved. Like I said, I think using D3 to do some kind of visualization would be pretty awesome, but not sure what I&amp;rsquo;d do with it just yet.&lt;/p&gt;
+
+&lt;h3 id=&#34;backbone-angular-why:5b7fafe42028dd2aed8d53d7e5079e12&#34;&gt;Backbone? Angular? Why?&lt;/h3&gt;
+
+&lt;p&gt;Backbone and Angular bring MVC-like structure to the front end of your web applications. MVC is a common software architecture pattern in which you seperate out your application into 3 parts:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Model: the underlying data in your application&lt;/li&gt;
+&lt;li&gt;View: the presentation of your data&lt;/li&gt;
+&lt;li&gt;Controller: the &amp;ldquo;business logic&amp;rdquo; of how your data gets transformed&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In a tradition web application, models are whatever database you&amp;rsquo;ve chosen, views are your HTML/CSS/JavaScript, and the controller is whatever server-side framework you&amp;rsquo;ve chosen (Rails, Django, Node, .Net MVC, etc).&lt;/p&gt;
+
+&lt;p&gt;JavaScript frameworks live entirely in the &lt;strong&gt;V&lt;/strong&gt; in MVC, and split that up into its own little MVC-like playground. The advantages for doing this quickly become apparent when trying to do anything more than basic interaction on a web page. HTML/CSS is all about presentation, not the data it&amp;rsquo;s presenting. By adding structure and splitting up concerns, interaction becomes much easier and has given way to the immersive &lt;a href=&#34;http://en.wikipedia.org/wiki/Single-page_application&#34;&gt;single page webapps&lt;/a&gt; of today.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Post 0 - Now with Wintersmith!</title>
+      <link>http://nathaniscool.com/post/post0/</link>
+      <pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://nathaniscool.com/post/post0/</guid>
+      <description>
+
+&lt;p&gt;Officially moved nathaniscool.com to using a new static site generator called &lt;a href=&#34;http://www.wintersmith.io&#34;&gt;Wintersmith&lt;/a&gt; and hosting through GitHub pages. It was really easy to get Wintersmith up and running and it runs on Node which I&amp;rsquo;ve kinda been interested in for while. Annnd it means I can use Handlebars and Underscore, both at which I&amp;rsquo;ve used for awhile and really, really like.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-is-a-static-site-generator:ebf694c4335b0c8ae3160edb3b0d51a9&#34;&gt;&amp;hellip; what is a &amp;ldquo;static site generator&amp;rdquo;?&lt;/h3&gt;
+
+&lt;p&gt;A static site generator takes a bunch of files on a computer, works some magic, and spits out a full site written in only HTML, CSS, and JavaScript (the love languages of the browser).&lt;/p&gt;
+
+&lt;h3 id=&#34;but-why:ebf694c4335b0c8ae3160edb3b0d51a9&#34;&gt;But, why?&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It&amp;rsquo;s cool&lt;/li&gt;
+&lt;li&gt;Since the entire site is HTML, CSS, and JavaScript, the options for hosting it increase exponentially and moving hosting solutions is super, super easy. If I wanted to move to something like Amazon S3, or even set up my own server, all I have to do is move the files.&lt;/li&gt;
+&lt;li&gt;You can&amp;rsquo;t &lt;a href=&#34;http://cdn-www.i-am-bored.com/media/95505_rushack2.jpg&#34;&gt;hax0r&lt;/a&gt; HTML. There&amp;rsquo;s no login to an account to make a post, and no database connection to retrieve the content from.&lt;/li&gt;
+&lt;li&gt;It allows you to really seperate out different parts of your site when you&amp;rsquo;re building it. For example, the sidebar, header, and main content panel of this site are all in seperate files. If I needed to make a change to one of those, it&amp;rsquo;s super easy to find it and make changes that then apply to every page that uses those sections. Every post is a seperate markdown file and contains meta-data about that post. But then you just run a command line a tool and build everything, and boom, you&amp;rsquo;ve got a site.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s cool&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;why-wintersmith:ebf694c4335b0c8ae3160edb3b0d51a9&#34;&gt;Why Wintersmith?&lt;/h3&gt;
+
+&lt;p&gt;I looked at &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; and actually made a site with &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;, which is written on top of Jekyll. Octopress is probably the most widely used static site generator, so it has a bunch of really cool themes that people have written for it. But 1. My Ruby chops are minimal and 2. it felt really hard to understand how stuff was put together.&lt;/p&gt;
+
+&lt;p&gt;When I started using Wintersmith, I felt like it just got out of my way and it made a bunch of sense in how you set up and get everything up and running.&lt;/p&gt;
+
+&lt;p&gt;And it&amp;rsquo;s cool.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

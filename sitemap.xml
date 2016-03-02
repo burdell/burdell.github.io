@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://nathaniscool.com/</loc>
+    <lastmod>2016-03-02T13:41:59-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://nathaniscool.com/post/newandimproved/</loc>
+    <lastmod>2016-03-02T13:41:59-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nathaniscool.com/post/cooljamz/</loc>
+    <lastmod>2014-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nathaniscool.com/post/fluentcoffee/</loc>
+    <lastmod>2014-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nathaniscool.com/post/parsepower/</loc>
+    <lastmod>2014-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nathaniscool.com/post/angularjs/</loc>
+    <lastmod>2013-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nathaniscool.com/post/post0/</loc>
+    <lastmod>2013-09-17T00:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>
