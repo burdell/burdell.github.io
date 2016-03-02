@@ -21,7 +21,10 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - arjen/hugo-build@1.8.1
-    - script:
-        name: echo
-        code: |
-          echo "hello world!"
+deploy:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: hugo-wercker.ig.nore.me
+        basedir: public
