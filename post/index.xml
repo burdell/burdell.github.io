@@ -6,8 +6,334 @@
     <description>Recent content in Posts on nathan griffin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Mar 2016 13:41:59 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 03 Mar 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://nathaniscool.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Building an Angular App as A Series of Mini-Apps</title>
+      <link>http://nathaniscool.com/post/miniappbuilds/</link>
+      <pubDate>Thu, 03 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nathaniscool.com/post/miniappbuilds/</guid>
+      <description>
+
+&lt;p&gt;I started a new job this year building out an Angular app from scratch.&lt;/p&gt;
+
+&lt;p&gt;For a number of reasons, we decided to make our app a series of single-page apps. So switching between different sections of the site would be a full page reload, but browsing inside the different sections of the site would not require full page reloads.&lt;/p&gt;
+
+&lt;p&gt;However, I still wanted to be able to share directives, services, providers, filters, HTML snippets, etc between all these apps easily without having to do something super annoying. So I decided to build the seperate apps inside of our Gulp build.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the basic folder structure I decided to go with:
+&lt;pre class=&#34;prettyprint&#34;&gt;
+app/
+    /areas
+        /userprofile
+            /config
+                userprofile.module.js
+                userprofile.routes.js
+            /edit
+                userprofile.edit.js
+                userprofile.edit.html
+    /shared
+        /directives
+        /filters
+        /providers
+        /services
+        &amp;hellip;etc&amp;hellip;
+    /design
+        &amp;hellip;. sundry things to make the site pretty (.scss, images, etc)&amp;hellip;
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;The basic idea is that each folder under /areas is a seperate app and /shared is, well, stuff that is shared. Each app also has a /config folder that contains a file to instantiate a specific module for the app, and a file to define its routing.&lt;/p&gt;
+
+&lt;p&gt;I set up a basic Gulp.js build process for creating one app just to get something going:
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var sources = {
+        js: [&#39;app/**/*.js&#39;],
+        partials: [
+            &#39;app/areas/**/*.html&#39;,
+            &#39;app/shared/**/*.html&#39;,
+            &#39;app/layout/**/*.html&#39;,
+            &#39;!app/index.html&#39;
+        ]
+    };
+    //move the app scripts to the dev output directory
+    gulp.task(&#39;scripts&#39;, function() {
+      return gulp.src(sources.js)
+            .pipe(gulp.dest(outputs.dev));
+    });
+
+    //ngHtml2js takes html files and puts them into Angular&#39;s $templateCache
+    gulp.task(&#39;partials&#39;, function() {
+        var partialGlob = gulp.src(sources.partials)
+            .pipe($.ngHtml2js({ moduleName: &amp;quot;app.templates&amp;quot; }))
+            .pipe(gulp.dest(outputs.dev + &#39;/templates&#39;));
+    });
+
+    //using a gulp library that reads the Bower dependencies and moves them to a vendor folder
+    gulp.task(&#39;bower&#39;, function(){
+        return gulp.src(bowerFiles)
+            .pipe(jsFilter)
+            .pipe(gulp.dest(outputs.dev + &#39;/vendor&#39;))
+            .pipe(jsFilter.restore());
+    });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Pretty simple. I then used a Gulp tool called gulp-inject that would gulp.src() the moved files and inject script tags into index.html of the app. To handle dependencies, I basically just used a naming convention and used this array in that gulp.src() call, which preserves the order:&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;
+
+    var dependencyJs = [
+        outputs.dev + &#39;/areas/**/config/*.js&#39;,
+        outputs.dev + &#39;/areas/**/*.js&#39;,
+        outputs.dev + &#39;/shared/**/*.module.js&#39;,
+        outputs.dev + &#39;/shared/**/*.js&#39;,
+        outputs.dev + &#39;/templates/**/*.js&#39;,
+        outputs.dev + &#39;/app.init.js&#39;
+    ]
+&lt;/pre&gt;
+
+&lt;p&gt;So after I added stuff like SASS compilation for our CSS, simple gulp.watch() functions, and stuff to spin up an Express server to serve index.html, that gave me a simple automated build process.&lt;/p&gt;
+
+&lt;h3 id=&#34;part-2-multiple-apps:56bc43ef27feba773a6870745fb51a1e&#34;&gt;Part 2: Multiple Apps!&lt;/h3&gt;
+
+&lt;p&gt;Once I had the project working with one area, it was time to add multiple apps to the build process. To do this I added a simple function that looped through all the targeted build areas.&lt;/p&gt;
+
+&lt;p&gt;This allowed me to re-use my existing build tasks with just having to account for the area name being passed to it.&lt;/p&gt;
+
+&lt;p&gt;So if this is my /areas folder:
+&lt;pre class=&#34;prettyprint&#34;&gt;
+ /areas
+    /directory
+    /userprofile
+    /forums
+ &lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;This would be the function to loop through them, with modified build tasks from above:
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var areas = [&#39;directory&#39;, &#39;userprofile&#39;, &#39;forums&#39;];
+    function areaBuilder(taskFn){
+        _.each(areas, function(areaName){
+            taskFn(areaName);
+        });
+    }
+
+    var sources: {
+        js: function(areaName) {
+            return [ &#39;app/&#39; + areaName + &#39;/**/*.js&#39;]
+        },
+        partials: function(areaName) {
+            return [
+                &#39;app/areas/&#39; + areaName + &#39;/**/*.html&#39;,
+                &#39;app/shared/**/*.html&#39;,
+                &#39;app/layout/**/*.html&#39;,
+                &#39;!app/index.html&#39;
+            ]
+        }
+    }
+
+    //move the app scripts to the dev output directory
+    gulp.task(&#39;scripts&#39;, function() {
+        areaBuilder(function(areaName){
+            return gulp.src(sources.js(areaName))
+                .pipe(gulp.dest(outputs.dev));
+        });
+    });
+
+    //ngHtml2js takes html files and puts them into Angular&#39;s $templateCache
+    gulp.task(&#39;partials&#39;, function() {
+        areBuilder(function(areaName){
+            var partialGlob = gulp.src(sources.partials(areaName))
+                .pipe($.ngHtml2js({ moduleName: &amp;quot;app.templates&amp;quot; }))
+                .pipe(gulp.dest(outputs.dev + &#39;/templates&#39;));
+        });
+    }); 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;
+I&amp;rsquo;m sure there has to be some npm tool to read folder names that would automate this even more, but adding a new section won&amp;rsquo;t be a super common occurence and doing it this ways gives you a way to &amp;lsquo;hide&amp;rsquo; sections for whatever reasion.&lt;/p&gt;
+
+&lt;p&gt;This approach allowed me to get the project rolling quickly, but there are of couple of things that are less than ideal about it:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Apps include a bunch of extra files from the /shared folder that aren&amp;rsquo;t needed&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As we started to develop various sections of the site, the /shared folder became pretty big. All the files from this folder were basically just dumped into an app regardless of whether that app needed it. I thought through a bunch of different ways to handle this. Most of them involved either setting dependencies inside the gulp build or other really convaluted things.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;This makes concatenation and minification way harder than it needs to be&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I played around with trying to concatenate and minify the scripts a bit, and every solution I came up with just seemed way harder than it needed to be. Tooling files like this quickly become bloated because of stuff like this and I really wanted to avoid that.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Handling file dependencies based off of folder and files names is really terrible in the long run&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Having consistent naming conventions is really important, but using it to build dependencies is super brittle. One derivation from this will cause a bunch of work (and workarounds most likely), causing more bloat.&lt;/p&gt;
+
+&lt;p&gt;Additionally, your actual files and dependencies are completely seperate. The makes it super not apparent what those dependencies are.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;part-3-a-solution:56bc43ef27feba773a6870745fb51a1e&#34;&gt;Part 3: A Solution&lt;/h3&gt;
+
+&lt;p&gt;The solution to this was to start using Browserify, which I knew about but had never actually used. Browserify lets you specify depencies inside of your JS files using Node-style require() statements which makes dependencies very clear and modular, and outputs your code into a single file so concatenation and minification become trivial. It also allowed me to completely take Bower out of the project, which is just one less thing to have to worry about.&lt;/p&gt;
+
+&lt;p&gt;Browserify gulp tasks:
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gulp.task(&#39;scripts&#39;, function() {
+    browserifyHelper();
+});
+
+gulp.task(&#39;prod-scripts&#39;, function(){
+    browserifyHelper(true);
+});
+
+function browserifyHelper(prodBuild) {
+    areaBuilder(function(areaName){
+        var b = browserify({ 
+            paths: [&#39;app/&#39;, &#39;node_modules&#39;, &#39;app/shared/&#39;, &#39;app/areas/&#39;],
+            fullPaths: true,
+            cache: {},
+            packageCache: {}
+        });
+
+        if (!prodBuild) {
+            b = watchify(b);
+            b.on(&#39;update&#39;, function(changedFilename){
+                bundleHelper(false, b, areaName);
+            });        
+        }
+        b.add(&#39;app/areas/&#39; + areaName + &#39;/init.js&#39;);
+        bundleHelper(prodBuild, b, areaName);
+    });
+}
+
+function bundleHelper(prodBuild, b, areaName){
+
+    if (areaName) {
+        return bundle(areaName);
+    } else {
+        areaBuilder(function(areaName) {
+            return bundle(areaName);
+        })
+    }
+
+    function bundle(areaName) {
+        var bundleBlob = b.bundle();
+
+        if (!prodBuild) {
+            bundleBlob =  bundleBlob.on(&#39;error&#39;, function(err) {
+                return $.notify().write(err);
+            });
+        }
+
+        bundleBlob = bundleBlob.pipe(source(jsAppFileName))
+            .pipe(buffer());
+
+        if (!prodBuild) { 
+            bundleBlob = bundleBlob
+                .pipe($.sourcemaps.init({ loadMaps: true }))
+                .pipe($.sourcemaps.write(&#39;./maps&#39;))
+        } else {
+            bundleBlob = bundleBlob
+                .pipe($.uglify());
+        }
+
+        bundleBlob
+            .pipe(gulp.dest(areaPath(areaName, prodBuild) + &#39;/js/&#39;))
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;
+Each app would have an entry point file of init.js which would require() all it&amp;rsquo;s individual pages (who would then define any component/services/etc it needed).&lt;/p&gt;
+
+&lt;p&gt;So if an area had this file structure&amp;hellip;
+&lt;pre class=&#34;prettyprint&#34;&gt;
+    /forums
+        /config
+            forums.routes.js
+        /list
+            forums.list.js
+            forums.list.html
+        /detail
+            forums.detail.js
+            forums.detail.html
+        forumsContainer.html
+        forumsContainer.js
+        init.js
+&lt;/pre&gt;
+&amp;hellip;its init.js would looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;use strict&#39;;
+
+var app = require(&#39;app.init.js&#39;);
+app(&#39;forums&#39;);
+
+require(&#39;forums/forumsContainer.js&#39;);
+require(&#39;forums/list/forums.list.js&#39;);
+require(&#39;forums/message/forums.detail.js&#39;);
+require(&#39;forums/config/forums.routes.js&#39;);
+
+... other stuff...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;
+Notice that {areaName}.module.js not longer exists. Another advantage Browserify gave me was the ability to write instantiating the app&amp;rsquo;s module generically. This allowed sitewide options/behavior and require() statements (stuff like permissions, navigation bar, footer, other stuff that is on every single page) to exist in one place. Here are the basics of app.init.js:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//vendor
+var angular = require(&#39;angular&#39;);
+
+function initializeApp(areaName) {
+    var moduleBuilder = require(&#39;modulebuilder&#39;);
+    angular.module(&#39;communityApp&#39;, [
+        &#39;ui.router&#39;,
+        &#39;ngSanitize&#39;,
+        &#39;community.templates&#39;,
+        moduleBuilder(&#39;community.providers&#39;),
+        moduleBuilder(&#39;community.services&#39;),
+        moduleBuilder(&#39;community.directives&#39;),
+        moduleBuilder(&#39;community.filters&#39;),
+        moduleBuilder(&#39;community.&#39; + areaName)
+    ])    
+    .config([&#39;$httpProvider&#39;, function($httpProvider){
+        $httpProvider.interceptors.push(require(&#39;services/permissionsLoader.js&#39;));
+    }]);
+
+    require(&#39;services/permissionsLoader.js&#39;);
+
+    require(&#39;directives/mainnavbar/mainnavbar.js&#39;);
+    require(&#39;directives/breadcrumbs/breadcrumbs.js&#39;);
+    require(&#39;directives/discussionsnavbar/discussionsnavbar.js&#39;);
+    require(&#39;directives/megamenu/megamenu.js&#39;);
+    require(&#39;directives/pageheader/pageheader.js&#39;);
+    require(&#39;directives/announcement/announcement.js&#39;);
+    require(&#39;directives/pagescroll/pagescroll.js&#39;);
+    require(&#39;directives/permissions/permissions.js&#39;);
+    require(&#39;directives/error/error.js&#39;);
+
+    require(&#39;basecontroller.js&#39;);
+
+    angular.element(document).ready(function(){
+        angular.bootstrap(document, [&#39;communityApp&#39;]);
+    });
+}
+
+module.exports = initializeApp;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;
+So, that&amp;rsquo;s the basic idea.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s not a perfect solution and I&amp;rsquo;m sure there are things that could be improved. One thing I&amp;rsquo;ve noticed is that looping through the area likes that with Browserify is relatively slow. The looping also breaks the promise&amp;rsquo;y nature of how I&amp;rsquo;ve seen most peoplep write gulp tasks, meaning that I guess it&amp;rsquo;s possible that a task could start prematurely, but I haven&amp;rsquo;t really run into that scenario.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Post 0, Part 2 - Now With Hugo!</title>
