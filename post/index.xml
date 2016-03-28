@@ -6,8 +6,235 @@
     <description>Recent content in Posts on nathan griffin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 03 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Mar 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://nathaniscool.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Angular Routing Curveballs</title>
+      <link>http://nathaniscool.com/post/routingcurveballs/</link>
+      <pubDate>Fri, 25 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://nathaniscool.com/post/routingcurveballs/</guid>
+      <description>
+
+&lt;p&gt;I wrote recently about &lt;a href=&#34;http://nathaniscool.com/post/miniappbuilds&#34;&gt;structuring an Angular app as a series of smaller apps&lt;/a&gt;. One tricky part about this architecture is dealing with between-app routing when using &lt;a href=&#34;https://github.com/angular-ui/ui-router&#34;&gt;UI Router&lt;/a&gt;, which provides powerful state-based routing for Angular apps that allow for cool things like nested views and handling asyncronous data.&lt;/p&gt;
+
+&lt;p&gt;There are 2 hurdles to jump:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Knowing the url for a state in another app&lt;/li&gt;
+&lt;li&gt;Getting Angular to refresh the page for those urls&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;knowing-the-url:8210323ad8d8da9c9a4161ccd9c52ed2&#34;&gt;Knowing the URL&lt;/h2&gt;
+
+&lt;p&gt;The number one goal in all this is to only have to define the actual urls for our states in one place.&lt;/p&gt;
+
+&lt;p&gt;This means using a &lt;a href=&#34;https://docs.angularjs.org/guide/providers&#34;&gt;provider&lt;/a&gt; that holds the actual url snippets which is then used inside the config function when setting the app&amp;rsquo;s routes and also inside a routing service that can be injected anywhere in the app.&lt;/p&gt;
+
+&lt;p&gt;The provider would look something like this:
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var routesProvider = function(){
+    var routeData = {
+        announcements: {
+            announcements: &#39;/announcements/:nodeId&#39;,
+            list: &#39;/list&#39;,
+            detail: &#39;/:id&#39;,
+            newtopic: &#39;/new&#39;,
+            edit: &#39;/edit&#39;
+        },
+        inbox: {
+            inbox: &#39;/inbox&#39;,
+            detail: &#39;/message/:id&#39;,
+            newtopic: &#39;/new&#39;
+        }
+    }
+
+    this.routes = routeData;
+    this.$get = function(){
+        return this.routes;
+    }
+};
+
+
+var providerName = &#39;AppRoutes&#39;;
+angular.module(&#39;app.providers&#39;)
+    .provider(providerName, routesProvider);
+module.exports = providerName;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Setting the routes for the app:
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require(&#39;shared/providers/routes&#39;);
+
+var config = function($stateProvider, $locationProvider, routesProvider) {
+    $locationProvider.html5Mode(true);
+
+    var announcementsRoutes = routesProvider.routes.announcements;
+
+    $stateProvider
+        .state(&#39;announcements&#39;, {
+            url: announcementsRoutes.announcements,
+            abstract: true,
+            templateUrl: &#39;announcements/announcements.html&#39;,
+        })
+        .state(&#39;announcements.newtopic&#39;, 
+            url: announcementRoutes.newtopic,
+            templateUrl: &#39;announcements/newtopic/announcements.newtopic.html&#39;
+            controller: &#39;NewAnnouncement as vm&#39;
+        )
+        .state(&#39;announcements.list&#39;, {
+            url: announcementsRoutes.list,
+            templateUrl: &#39;announcements/list/announcements.list.html&#39;,
+            controller: &#39;AnnouncementList as vm&#39;,
+        })
+        .state(&#39;announcements.edit&#39;, standardRoutes.newTopic({
+            url: announcementsRoutes.edit,
+            templateUrl: &#39;announcements/edit/announcements.edit.html&#39;
+        }, true))
+        .state(&#39;announcements.detail&#39;, {
+            url: announcementsRoutes.detail, 
+            templateUrl: &#39;announcements/detail/announcements.detail.html&#39;,
+            controller: &#39;AnnouncementDetail as vm&#39;
+        });
+    };
+    config.$inject = [&#39;$stateProvider&#39;, &#39;$locationProvider&#39;, &#39;AppRoutesProvider&#39;];
+
+angular.module(&#39;community.announcements&#39;)
+    .config(config);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;And the corresponding service and a simplified generateUrl function:
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var _ = require(&#39;underscore&#39;);
+
+var routingService = function(appRoutes){
+    return {
+        generateUrl: function(route, routeData){
+            if (!route) return &amp;quot;&amp;quot;;
+
+            var routeSections = route.split(&#39;.&#39;);
+            var areaName = routeSections[0];
+            var appRoutes = appRoutes[areaName];
+
+            var url = &amp;quot;&amp;quot;;           
+            _.each(routeSections, function(section){
+                url += areaRoutes[section];
+            }); 
+
+            _.each(routeData, function(value, key){
+                url = url.replace(&#39;:&#39; + key, value);
+            });
+
+            return url;
+        }
+    };
+};
+routingService.$inject = [require(&#39;providers/routes.js&#39;)];
+
+var serviceName = &#39;AppRoutingService&#39;;
+angular.module(&#39;app.services&#39;)
+    .service(serviceName, routingService);
+
+module.exports = serviceName;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;So if you were on your inbox page, and needed to link to an announcement with the id of 1, you would call:
+&lt;pre class=&#34;prettyprint&#34;&gt;
+AppRoutingService.generateUrl(
+    &amp;lsquo;announcements.detail&amp;rsquo;,
+    { nodeId: &amp;lsquo;CoolAnnouncements&amp;rsquo;, id: 1 }
+);
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;refresh-vs-no-refresh-urls:8210323ad8d8da9c9a4161ccd9c52ed2&#34;&gt;Refresh vs. No-Refresh URLs&lt;/h2&gt;
+
+&lt;p&gt;If you have 2 urls that have the same host, Angular will prevent a page refresh when going between them (which is the whole point of a single-page application). Like in the scenario above of going from your inbox to an announcement, we have to somehow tell Angular to not single-page these urls.&lt;/p&gt;
+
+&lt;p&gt;There are 2 solutions I found for this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use target=&amp;rsquo;_self&amp;rsquo; for any URLs that need a page refresh&lt;/li&gt;
+&lt;li&gt;Dynamically set the value of the &amp;lt;base&amp;gt; element to include the app name&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Full disclosure, I had already implemented the first one before I thought of the second one so I never actually tried the second one. However, the second solution also makes the assumption that all the urls a particular app start with the same base (i.e. &amp;lsquo;/announcements/&amp;hellip;&amp;rsquo;, &amp;lsquo;/forums/&amp;hellip;&amp;rsquo;, &amp;lsquo;/inbox/&amp;hellip;&amp;rsquo;). For most of our urls this was a safe assumption, but there was actually one app where this WASN&amp;rsquo;T true so I&amp;rsquo;m not sure I would have gone with it anyway.&lt;/p&gt;
+
+&lt;p&gt;The prospect of going through and adding target=&amp;rdquo;_self&amp;rdquo; to all urls that need it sounds awful because&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It&amp;rsquo;s a bunch of really tedious work, both upfront and for maintenance. What would happen if we wanted to suddenly turn the whole site into a single-page app? Gross.&lt;/li&gt;
+&lt;li&gt;There are cases where you can&amp;rsquo;t assume anything about which app you are actually in, like with links from the navigation bar and links in re-used view components that appear in different apps.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It made sense then to wrap setting the target=&amp;lsquo;self&amp;rsquo; attribute in a directive. I also added a getCurrentArea() function to the routing service that would tell you what app you were in currently, and a getArea() that could tell you the app of a passed url.
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function areaLinkHandler($parse, $timeout, routingService) {
+    var link = function(scope, element, attrs) {
+        function setHref(elementHref) {
+            var elementNode = element[0];
+            elementNode.setAttribute(&#39;href&#39;, elementHref);
+
+            if (routingService.getCurrentArea() !== routingService.getArea(elementHref)) {
+                elementNode.setAttribute(&#39;target&#39;, &#39;_self&#39;);
+            }
+        }
+
+        function getHref() {
+            var routeValues = !attrs.routeValues ? null : $parse(attrs.routeValues)();
+            return routingService.generateUrl(attrs.linkHandlerRoute, routeValues);
+        }
+
+        $timeout(function(){
+            var elementHref = attrs.linkHandlerRoute ? getHref() : attrs.areaLinkHandler;
+            setHref(elementHref);
+        }, 0);
+    };
+
+    var directive = {
+        link: link,
+        restrict: &#39;A&#39;,
+        scope: true,
+        replace: true
+    };
+    return directive;
+}
+
+areaLinkHandler.$inject = [
+    &#39;$parse&#39;, 
+    &#39;$timeout&#39;, 
+    require(&#39;services/routing&#39;)
+];
+
+angular.module(&#39;app.directives&#39;)
+    .directive(&#39;areaLinkHandler&#39;, areaLinkHandler);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;This actually handles both pre-generated urls:&lt;/p&gt;
+
+&lt;pre class=&#34;prettyprint&#34;&gt;&amp;lt;a area-link-handler=&#34;coolapp.com/coolurlimade/2&#34;&amp;gt;&amp;lt;/a&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip;and generating based off a route and some data
+&lt;pre class=&#34;prettyprint&#34;&gt;
+&amp;lt;a area-link-handler
+    link-handler-route=&amp;ldquo;announcements.detail&amp;rdquo;
+    route-data=&amp;ldquo;{ nodeId: &amp;lsquo;CoolAnnouncements&amp;rsquo;, id: 2 }&amp;rdquo;&amp;gt;
+&amp;lt;/a&amp;gt;
+&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Building an Angular App as A Series of Mini-Apps</title>
